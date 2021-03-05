@@ -93,4 +93,20 @@ class ApiController extends Controller
         return response()->json($iscrizione);
 
     }
+
+    public function vedicorso($idCorso){
+
+        $iscrizione_scii = Iscrizione::where('idCorso', $idCorso)->get();
+
+        return response()->json($iscrizione_scii);
+    }
+
+    public function deleteiscrizione($idUtente){
+
+        $iscrizione_scii = Iscrizione::where('idUtente', $idUtente)->first();
+        $iscrizione_scii->delete();
+
+        return response()->json($iscrizione_scii);
+
+    }
 }

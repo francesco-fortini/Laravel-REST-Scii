@@ -28,3 +28,5 @@ Route::delete('/deletecorso/{idCorso}', [App\Http\Controllers\ApiController::cla
 
 //Operazioni di gestione prenotazioni ed iscrizioni per clienti impianto scii
 Route::post('/iscrizione', [App\Http\Controllers\ApiController::class, 'iscrizione']);
+Route::get('/vedicorso/{idCorso}', [App\Http\Controllers\ApiController::class, 'vedicorso']);
+Route::delete('/deleteiscrizione/{idUtente}', [App\Http\Controllers\ApiController::class, 'deleteiscrizione']);
